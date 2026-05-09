@@ -38,14 +38,7 @@ function ForgotPassword() {
       {message && (
         <div className="success-msg mb-4">
           {message}
-          {resetUrl && (
-            <div className="mt-2" style={{ wordBreak: 'break-all' }}>
-              <strong>Demo Reset Link:</strong> <br/>
-              <Link to={resetUrl.replace('https://expert-booking-platform-tau.vercel.app', '')} style={{ textDecoration: 'underline' }}>
-                {resetUrl}
-              </Link>
-            </div>
-          )}
+        
         </div>
       )}
       {error && <div className="error-msg mb-4">{error}</div>}
