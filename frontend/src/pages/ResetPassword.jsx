@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 
-const API_URL = 'http://localhost:5001';
+const API_URL = import.meta.env.VITE_API_URL;
 
 function ResetPassword() {
   const { token } = useParams();

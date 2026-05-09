@@ -6,7 +6,7 @@ import { format, addDays } from 'date-fns';
 import { Star, Clock, User, Mail, Phone, Calendar as CalendarIcon } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 
-const API_URL = 'http://localhost:5001';
+const API_URL = import.meta.env.VITE_API_URL;
 const socket = io(API_URL);
 
 // Generate upcoming 7 days
