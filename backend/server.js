@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin:'https://expert-booking-platform-tau.vercel.app',
     methods: ['GET', 'POST', 'PATCH']
   }
 });
