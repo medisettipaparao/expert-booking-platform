@@ -17,16 +17,16 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  const login = async (email, password) => {
-    const { data } = await axios.post('http://localhost:5001/auth/login', { email, password });
+    const login = async (email, password) => {
+    const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, { email, password });
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(data.user));
     setUser(data.user);
     axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
   };
 
-  const register = async (name, email, password) => {
-    const { data } = await axios.post('http://localhost:5001/auth/register', { name, email, password });
+    const register = async (name, email, password) => {
+    const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, { name, email, password });
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(data.user));
     setUser(data.user);
