@@ -60,7 +60,7 @@ exports.forgotPassword = async (req, res) => {
 
     // Since this is a local development demo, we will return the token directly.
     // In production, you would send this via email.
-    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetUrl = `https://expert-booking-platform-tau.vercel.app/reset-password/${resetToken}`;
     
     res.status(200).json({ 
       message: 'Password reset link generated successfully.',

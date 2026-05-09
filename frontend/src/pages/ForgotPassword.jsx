@@ -41,7 +41,7 @@ function ForgotPassword() {
           {resetUrl && (
             <div className="mt-2" style={{ wordBreak: 'break-all' }}>
               <strong>Demo Reset Link:</strong> <br/>
-              <Link to={resetUrl.replace('http://localhost:5173', '')} style={{ textDecoration: 'underline' }}>
+              <Link to={resetUrl.replace('https://expert-booking-platform-tau.vercel.app', '')} style={{ textDecoration: 'underline' }}>
                 {resetUrl}
               </Link>
             </div>
